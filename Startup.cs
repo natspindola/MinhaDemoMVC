@@ -55,6 +55,7 @@ namespace MinhaDemoMVC
 
             app.UseMvc(routes =>
             {
+                // as rotas são seguidas de cima para baixo, caso não consiga seguir a primeira, cai na segunda
                 routes.MapRoute(
                 name: "modulos",
                 template: "Gestao/{controller=Home}/{action=Index}/{id?}");
@@ -63,6 +64,7 @@ namespace MinhaDemoMVC
                     name: "categoria",
                     template: "{controller=Home}/{action=Index}/{id}/{categoria?}");
 
+                //a última rota deve ser a padrão, pois ela sempre vai responder, assim evita erro na aplicação se nenhuma anterior funcionar 
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
