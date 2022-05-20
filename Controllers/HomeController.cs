@@ -10,7 +10,7 @@ namespace MinhaDemoMVC.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string id, string categoria)
         {
             return View();
         }
