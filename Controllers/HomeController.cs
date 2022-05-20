@@ -13,8 +13,9 @@ namespace MinhaDemoMVC.Controllers
     public class HomeController : Controller
     {
         [Route("")]
-        [Route("pagina-inicial")] //rota da action
-        public IActionResult Index(string id, string categoria)
+        [Route("pagina-inicial")] //rota da action - não é obrigado ter um ID
+        [Route("pagina-inicial/{id:int}/{categoria?}")] //rota da action por atributo - é obrigado ter um ID mas não uma categoria
+        public IActionResult Index(int id, string categoria)
         {
             return View();
         }
