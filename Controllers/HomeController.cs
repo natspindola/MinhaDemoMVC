@@ -25,6 +25,13 @@ namespace MinhaDemoMVC.Controllers
         public IActionResult Privacy()
         {
             return View();
+
+            //var fileBytes = System.IO.File.ReadAllBytes(@"C:\arquivo.txt");
+            //var fileName = "ola.txt";
+            //return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+            // aqui ele faz o download e lê o arquivo
+
+            //return Content("qualquer coisa");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
