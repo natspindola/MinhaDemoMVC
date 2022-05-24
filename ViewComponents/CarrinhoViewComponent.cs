@@ -18,7 +18,7 @@ namespace MinhaDemoMVC.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-
+            return View(ItensCarrinho);
         }
     }
 }
