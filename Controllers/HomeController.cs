@@ -26,8 +26,8 @@ namespace MinhaDemoMVC.Controllers
                 Valor = 100000
             };
 
-            return RedirectToAction("Privacy", filme);
-            //return View();
+            //return RedirectToAction("Privacy", filme);
+            return View();
         }
 
         [Route("privacidade")] //rota da action
