@@ -21,6 +21,7 @@ namespace MinhaDemoMVC.Models
         public DateTime DataLancamento { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF""'\W-]*$", ErrorMessage = "Genero em formato inválido")] //a primeira letra é de A-Z maíuscula, e o restante de a-z minúscula, usando acentos
+        [Required(ErrorMessage = "O campo Genero é obrigatório.")]
         [StringLength(60, MinimumLength = 3, ErrorMessage = "O Genero precisa ter mais de 3 caractéres.")]
         public string Genero { get; set; }
 
