@@ -17,6 +17,7 @@ namespace MinhaDemoMVC.Models
         public string Titulo { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Data em formato inválido.")]
+        [Required(ErrorMessage = "O campo Data de Lançamento é obrigatório.")]
         [Display(Name = "Data de Lançamento")]
         public DateTime DataLancamento { get; set; }
 
